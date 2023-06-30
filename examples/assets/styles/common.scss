@@ -1,0 +1,347 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+
+  &.is-component {
+    overflow: hidden;
+  }
+}
+
+#app {
+  height: 100%;
+  
+  &.is-component, &.is-design {
+    overflow-y: hidden;
+
+    .main-cnt {
+      padding: 0;
+      margin-top: 0;
+      height: 100%;
+      min-height: auto;
+      box-sizing: border-box;
+    }
+
+    .headerWrapper {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1500;
+      
+      .container {
+        padding: 0;
+      }
+    }
+  }
+}
+
+a {
+  color: #409EFF;
+  text-decoration: none;
+}
+
+code {
+  background-color: #f9fafc;
+  padding: 0 4px;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.hljs {
+  line-height: 1.8;
+  font-family: Menlo, Monaco, Consolas, Courier, monospace;
+  font-size: 12px;
+  padding: 18px 24px;
+  background-color: #fafafa;
+  border: solid 1px #eaeefb;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  -webkit-font-smoothing: auto;
+}
+
+.main-cnt {
+  padding: 64px 0 0;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+.wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.wrapper-content {
+  padding-top: 40px;
+}
+
+.container,
+.page-container {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.page-container {
+  h2 {
+    position: relative;
+    font-size: 28px;
+    color: #1f2d3d;
+    margin: 0;
+    // border-left: 5px solid #409EFF;
+    padding-left: 15px;
+  }
+  h2:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: block;
+    width: 4px;
+    height: 28px;
+    transform: translateY(-50%);
+    background-color: #409EFF;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h2, h3, h4, h5 {
+    font-weight: normal;
+    color: #1f2f3d;
+
+    &:hover a {
+      opacity: .4;
+    }
+
+    a {
+      float: left;
+      margin-left: -30px;
+      opacity: 0;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .4;
+      }
+    }
+  }
+
+  p {
+    font-size: 14px;
+    color: #5e6d82;
+    line-height: 1.5;
+  }
+
+  .tip {
+    padding: 8px 16px;
+    background-color: #eeeeee;
+    // border-radius: 4px;
+    border-left: #ebc478 3px solid;
+    margin: 20px 0;
+
+    code {
+      background-color: rgba(255, 255, 255, .7);
+      color: #445368;
+    }
+  }
+
+  .warning {
+    padding: 8px 16px;
+    background-color: #fff6f7;
+    border-radius: 4px;
+    border-left: #FE6C6F 5px solid;
+    margin: 20px 0;
+
+    code {
+      background-color: rgba(255, 255, 255, .7);
+      color: #445368;
+    }
+  }
+}
+
+.page-banner {
+  height: 235px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  .wrapper {
+    h2 {
+      padding: 84px 0 0 145px;
+      font-size: 34px;
+      color: #424242;
+    }
+  }
+}
+.card-item {
+  box-sizing: border-box;
+  width: 300px;
+  height: 300px;
+  padding: 24px;
+  margin: auto;
+  margin-bottom: 40px;
+  background: #F5F8FA;
+  border-radius: 8px;
+  cursor: pointer;
+  .card-type {
+    width: 100%;
+    height: 120px;
+    background: #2D88FE;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  p {
+    color: rgba(0, 0, 0, 1);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .card-foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      font-weight: bold;
+      font-size: 14px;
+      color: rgba(0,0,0,0.50);
+    }
+  }
+}
+.card-item:hover {
+  .icon-arrow {
+    background-image: url('~examples/assets/images/arrow_active.png');
+  }
+}
+.card-module-1 {
+  .card-type {
+    height: 150px;
+    background: #ffffff;
+    .img {
+      width: 84px;
+      height: 104px;
+    }
+  }
+  .card-title {
+    overflow: hidden;
+    height: 30px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+.card-module-1:hover {
+  .icon-download {
+    background-image: url('~examples/assets/images/download_active.png');
+  }
+}
+
+@media (max-width: 768px) {
+  .page-guide, .page-resource {
+    .content {
+      padding-left: 0;
+    }
+  }
+}
+.demo {
+  margin: 20px 0;
+}
+.icon {
+  display: inlin-block;
+  background-size: contain;
+}
+.icon-arrow, .icon-download {
+  width: 48px;
+  height: 34px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.icon-arrow {
+  background-image: url('~examples/assets/images/arrow_static.png');
+}
+.icon-arrow:hover {
+  background-image: url('~examples/assets/images/arrow_active.png');
+}
+.icon-download {
+  background-image: url('~examples/assets/images/download_static.png');
+}
+.icon-download:hover {
+  background-image: url('~examples/assets/images/download_active.png');
+}
+
+@media (max-width: 1140px) {
+  .container,
+  .page-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container,
+  .page-container {
+    padding: 0 20px;
+  }
+
+  #app.is-component .headerWrapper .container {
+    padding: 0 12px;
+  }
+}
+
+.page-detail {
+  .section {
+    margin-bottom: 40px;
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+  }
+  h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+  }
+  p {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #000000;
+    line-height: 24px;
+  }
+  .img {
+    max-width: 100%;
+  }
+}
+
+.color-alarm {
+  color: #FF4D4F;
+}
+.color-tips {
+  color: #FAAD14;
+}
+.color-link {
+  color: #1A7BF3;
+}

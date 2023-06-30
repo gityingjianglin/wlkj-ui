@@ -1,0 +1,109 @@
+@import "mixins/mixins";
+@import "mixins/utils";
+@import "common/var";
+
+@include b(form) {
+  @include m(label-left) {
+    & .wl-form-item__label {
+      text-align: left;
+  }
+  }
+  @include m(label-top) {
+    & .wl-form-item__label {
+      float: none;
+      display: inline-block;
+      text-align: left;
+      padding: 0 0 10px 0;
+    }
+  }
+  @include m(inline) {
+    & .wl-form-item {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+
+    & .wl-form-item__label {
+      float: none;
+      display: inline-block;
+    }
+    & .wl-form-item__content {
+      display: inline-block;
+      vertical-align: top;
+    }
+    &.wl-form--label-top .wl-form-item__content {
+      display: block;
+    }
+  }
+}
+
+@include b(form-item) {
+  margin-bottom: 22px;
+  @include utils-clearfix;
+
+  & .wl-form-item {
+    margin-bottom: 0;
+  }
+
+  & .wl-input__validateIcon {
+    display: none;
+  }
+
+  @include m(medium) {
+    .wl-form-item__label {
+      line-height: 36px;
+    }
+    .wl-form-item__content {
+      line-height: 36px;
+    }
+  }
+  @include m(small) {
+    .wl-form-item__label {
+      line-height: 32px;
+    }
+    .wl-form-item__content {
+      line-height: 32px;
+    }
+    &.wl-form-item {
+      margin-bottom: 18px;
+    }
+    .wl-form-item__error {
+      padding-top: 2px;
+    }
+  }
+
+  @include m(mini) {
+    &.wl-form-item {
+      margin-bottom: 18px;
+    }
+    .wl-form-item__label {
+      line-height: 28px;
+    }
+    .wl-form-item__content {
+      line-height: 28px;
+    }
+    .wl-form-item__error {
+      padding-top: 1px;
+    }
+  }
+
+  @include e(label-wrap) {
+    float: left;
+    .wl-form-item__label {
+      display: inline-block;
+      float: none;
+    }
+  }
+
+  @include when(required) {
+    @include pseudo('not(.is-no-asterisk)') {
+      & > .wl-form-item__label:before,
+      & .wl-form-item__label-wrap > .wl-form-item__label:before {
+        content: '*';
+        color: $--color-danger;
+        margin-right: 4px;
+      }
+    }
+  }
+
+}

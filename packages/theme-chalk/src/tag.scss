@@ -1,0 +1,160 @@
+@charset "UTF-8";
+@import "common/var";
+@import "mixins/mixins";
+@import "mixins/utils";
+
+.tag-group+.tag-group {
+  margin-top: 10px;
+}
+@include b(tag) {
+  background-color: #ecf5ff;
+  display: inline-block;
+  height: $--tag-default-height;
+  padding: 0 $--tag-default-padding-horizontal;
+  line-height: $--tag-default-line-height;
+  font-size: 12px;
+  color: $--color-primary;
+  border: 1px solid #d9ecff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  &+.wl-tag{
+    margin-left: 10px;
+  }
+  & .wl-tag__close{
+    margin-left: 6px;
+    cursor: pointer;
+    &:hover {
+      background-color: $--color-primary;
+      border-radius: 50%;
+      color: $--color-white;
+    }
+  }
+  &.wl-tag--dark{
+    background-color: $--color-primary;
+    border-color: $--color-primary;
+    color: $--color-white;
+  }
+  &.wl-tag--plain{
+    background-color: $--color-white;
+    border-color: $--color-primary-light-6;
+    color: $--color-primary;
+  }
+  @include m(success) {
+    background-color: $--tag-success-background-color;
+    border-color: $--tag-success-border-color;
+    color: $--color-success;
+    .wl-tag__close{
+      cursor: pointer;
+      &:hover {
+        background-color: $--color-success;
+        border-radius: 50%;
+        color: $--color-white;
+      }
+    }
+    &.wl-tag--dark{
+      background-color: $--color-success;
+      border-color: $--color-success;
+      color: $--color-white;
+    }
+    &.wl-tag--plain{
+      background-color: $--color-white;
+      border-color: $--tag-plain-success-border-color;
+      color:  $--color-success;
+    }
+    &.is-hit{
+      border-color: $--color-success;
+    }
+  }
+  @include m(info) {
+    background-color: $--tag-info-background-color;
+    border-color: $--tag-info-border-color;
+    color: $--color-info;
+    .wl-tag__close{
+      cursor: pointer;
+      &:hover {
+        background-color: $--color-info;
+        border-radius: 50%;
+        color: $--color-white;
+      }
+    }
+    &.wl-tag--dark{
+      background-color: $--color-info;
+      border-color: $--color-info;
+      color: $--color-white;
+    }
+    &.wl-tag--plain{
+      background-color: $--color-white;
+      border-color: $--tag-plain-info-border-color;
+      color:  $--color-info;
+    }
+    &.is-hit{
+      border-color: $--color-info;
+    }
+  }
+  @include m(warning) {
+    background-color: $--tag-warning-background-color;
+    border-color: $--tag-warning-border-color;
+    color: $--color-warning;
+    .wl-tag__close{
+      &:hover {
+        background-color: $--color-warning;
+        border-radius: 50%;
+        color: $--color-white;
+      }
+    }
+    &.wl-tag--dark{
+      background-color: $--color-warning;
+      border-color: $--color-warning;
+      color: $--color-white;
+    }
+    &.wl-tag--plain{
+      background-color: $--color-white;
+      border-color: $--tag-plain-warning-border-color;
+      color:  $--color-warning;
+    }
+    &.is-hit{
+      border-color: $--color-warning;
+    }
+  }
+  @include m(danger) {
+    background-color: $--tag-danger-background-color;
+    border-color: $--tag-danger-border-color;
+    color: $--color-danger;
+    .wl-tag__close{
+      &:hover {
+        background-color: $--color-danger;
+        border-radius: 50%;
+        color: $--color-white;
+      }
+    }
+    &.wl-tag--dark{
+      background-color: $--color-danger;
+      border-color: $--color-danger;
+      color: $--color-white;
+    }
+    &.wl-tag--plain{
+      background-color: $--color-white;
+      border-color: $--tag-plain-danger-border-color;
+      color:  $--color-danger;
+    }
+    &.is-hit{
+      border-color: $--color-danger;
+    }
+  }
+  @include m(medium) {
+    height: $--tag-medium-height;
+    line-height: $--tag-medium-line-height;
+  }
+  @include m(small) {
+    height: $--tag-small-height;
+    padding: 0 $--tag-medium-padding-horizontal;
+    line-height: $--tag-small-line-height;
+  }
+  @include m(mini) {
+    height: $--tag-mini-height;
+    padding: 0 $--tag-mini-padding-horizontal;
+    line-height: $--tag-mini-line-height;
+  }
+ 
+}

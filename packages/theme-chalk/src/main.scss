@@ -1,0 +1,11 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(main) {
+  box-sizing: border-box;
+  display: block;
+  overflow: auto;
+  flex: 1;
+  flex-basis: auto;
+  padding: $--main-padding;
+}

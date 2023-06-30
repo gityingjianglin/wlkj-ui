@@ -1,0 +1,21 @@
+.demo-block.demo-button {
+  .wl-row {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .wl-button + .wl-button {
+    margin-left: 10px;
+  }
+  .wl-button-group {
+    .wl-button + .wl-button {
+      margin-left: 0;
+    }
+
+    & + .wl-button-group {
+      margin-left: 10px;
+    }
+  }
+}

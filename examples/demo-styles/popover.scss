@@ -1,0 +1,43 @@
+.demo-block.demo-popover {
+  .wl.popover + .wl.popover {
+    margin-left: 10px;
+  }
+  .wl.input {
+    width: 360px;
+  }
+  .wl.button {
+    margin-left: 10px;
+  }
+  .box {
+    width: 400px;
+
+    .top {
+      text-align: center;
+    }
+
+    .left {
+      float: left;
+      width: 60px;
+      .wl-button {
+        margin-bottom: 10px;
+      }
+    }
+
+    .right {
+      float: right;
+      width: 60px;
+      .wl-button {
+        margin-bottom: 10px;
+      }
+    }
+
+    .bottom {
+      clear: both;
+      text-align: center;
+    }
+
+    .item {
+      margin: 4px;
+    }
+  }
+}

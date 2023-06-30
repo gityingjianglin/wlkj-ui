@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@import "common/var";
+@import "mixins/mixins";
+@include b(breadcrumb) {
+
+  @include e(item) {
+    &:last-child {
+      @include e(separator) {
+        display: none;
+      }
+    }
+  }
+  @include e(inner) {
+    a {
+      font-weight: 700;
+      text-decoration: none;
+      transition: color .2s cubic-bezier(.645,.045,.355,1);
+      color: #303133;
+      &:hover {
+        color: $--color-primary;
+        cursor: pointer;
+      }
+    }
+    @include when(link) {
+      & {
+        font-weight: 700;
+        text-decoration: none;
+        transition: color .2s cubic-bezier(.645,.045,.355,1);
+      }
+      &:hover {
+        color: $--color-primary;
+        cursor: pointer;
+      }
+    }
+  }
+  @include e(separator) {
+    margin: 0 9px;
+    font-weight: 700;
+    color: #c0c4cc;
+    &[class*=icon] {
+      margin: 0 6px;
+      font-weight: 400;
+    }
+  }
+}
+

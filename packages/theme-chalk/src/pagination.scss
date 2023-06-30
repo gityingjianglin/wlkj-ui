@@ -1,0 +1,188 @@
+@charset "UTF-8";
+@import "common/var";
+@import "mixins/mixins";
+@import "common/var";
+@import "button";
+@import "select";
+
+@include b(pagination) {
+  white-space: nowrap;
+  padding: 2px 5px;
+  color: #303133;
+  font-weight: 700;
+  &::before,
+  &::after {
+    display: table;
+    content: "";
+  }
+  &.is-background {
+    .wl-pager li, .btn-prev, .btn-next {
+      margin: 0 5px;
+      background-color: #f4f4f5;
+      color: #606266;
+      min-width: 30px;
+      border-radius: 2px;
+    }
+    .wl-pager li:not(.disabled).active {
+      background-color: #1A7BF3;
+      color: #fff;
+    }
+    .btn-prev:disabled, .btn-next:disabled {
+      color: #c0c4cc;
+    }
+  }
+  &.is-border {
+    .wl-pager li, .btn-prev, .btn-next {
+      margin: 0 5px;
+      color: #606266;
+      min-width: 30px;
+      border-radius: 2px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    .wl-pager li:not(.disabled).active {
+      border: 1px solid #1A7BF3;
+      background-color: #1A7BF3;
+      color: #fff;
+    }
+    .btn-prev:disabled, .btn-next:disabled {
+      color: #c0c4cc;
+    }
+  }
+  button {
+    border: none;
+    padding: 0 6px;
+    background: transparent;
+    &:hover {
+      color: #409eff;
+    }
+    &:disabled {
+      color: #c0c4cc;
+      background-color: #fff;
+      cursor: not-allowed;
+    }
+  }
+  .btn-next, .btn-prev {
+    background: 50% no-repeat;
+    background-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 0;
+    color: #303133;
+  }
+  .btn-prev {
+    padding-right: 12px;
+  }
+  .btn-next {
+    padding-left: 12px;
+  }
+  button, span:not([class*=suffix]) {
+    display: inline-block;
+    font-size: 13px;
+    min-width: 35.5px;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+  .wl-pager {
+    user-select: none;
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 0 4px;
+      background: #fff;
+      vertical-align: top;
+      display: inline-block;
+      font-size: 13px;
+      min-width: 35.5px;
+      height: 28px;
+      line-height: 28px;
+      cursor: pointer;
+      box-sizing: border-box;
+      text-align: center;
+      margin: 0;
+      &.active {
+        color: #409eff;
+        cursor: default;
+      }
+    }
+  }
+  @include e(total) {
+    margin-right: 10px;
+    font-weight: lighter;
+  }
+  @include e(sizes) {
+    width: 100px;
+    margin-right: 10px;
+  }
+  @include e(jump) {
+    margin-left: 10px;
+    font-weight: lighter;
+  }
+  @include e(editor) {
+    height: 28px;
+    width: 50px;
+    margin: 0 10px;
+    input {
+      height: 100%;
+      width: 50px;
+      padding: 0 4px;
+      text-align: center;
+    }
+  }
+  @include m(small) {
+    .btn-next, .btn-prev, .wl-pager li, .wl-pager li.btn-quicknext, .wl-pager li.btn-quickprev, .wl-pager li:last-child {
+      border-color: transparent;
+      font-size: 12px;
+      line-height: 22px;
+      height: 22px;
+      min-width: 22px !important;
+    }
+    .btn-next, .btn-prev {
+      padding-right: 4px;
+      padding-left: 4px;
+    }
+    @include e(total) {
+      margin-right: 6px;
+      height: 22px !important;
+      line-height: 22px !important;
+      font-size: 12px !important;
+    }
+    @include e(sizes) {
+      margin-right: 6px;
+      height: 22px !important;
+      line-height: 22px !important;
+      .wl-select {
+        height: 22px;
+        > .wl-input {
+          height: 22px;
+          line-height: 22px;
+        }
+        .wl-input__inner {
+          height: 22px;
+          line-height: 22px;
+        }
+      }
+    }
+    @include e(jump) {
+      height: 22px !important;
+      line-height: 22px !important;
+      margin-left: 6px;
+    }
+    @include e(editor) {
+      height: 22px;
+      width: 50px;
+      margin: 0 10px;
+      input {
+        height: 100%;
+        width: 50px;
+        padding: 0 4px;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "zh-CN": [
+    {
+      "name": "开发指南",
+      "children": [
+        {
+          "path": "/installation",
+          "name": "安装"
+        },
+        {
+          "path": "/quickstart",
+          "name": "快速上手"
+        }
+      ]
+    },
+    {
+      "name": "组件",
+      "groups": [
+        {
+          "groupName": "通用",
+          "list": [
+            {
+              "path": "/layout",
+              "title": "Layout",
+              "chTitle": "栅格化布局"
+            },
+            {
+              "path": "/container",
+              "title": "Container",
+              "chTitle": "布局容器"
+            },
+            {
+              "path": "/icon",
+              "title": "Icon",
+              "chTitle": "图标"
+            },
+            {
+              "path": "/button",
+              "title": "Button ",
+              "chTitle": "按钮"
+            },
+            {
+              "path": "/link",
+              "title": "Link",
+              "chTitle": "文字链接"
+            }
+          ]
+        },
+        {
+          "groupName": "表单",
+          "list": [
+            {
+              "path": "/radio",
+              "title": "Radio ",
+              "chTitle": "单选框"
+            },
+            {
+              "path": "/checkbox",
+              "title": "Checkbox ",
+              "chTitle": "多选框"
+            },
+            {
+              "path": "/input",
+              "title": "Input ",
+              "chTitle": "输入框"
+            },
+            {
+              "path": "/select",
+              "title": "Select ",
+              "chTitle": "选择器"
+            },
+            {
+              "path": "/cascader",
+              "title": "Cascader ",
+              "chTitle": "级联选择器"
+            },
+            {
+              "path": "/switch",
+              "title": "Switch ",
+              "chTitle": "开关"
+            },
+            {
+              "path": "/slider",
+              "title": "Slider ",
+              "chTitle": "滑块"
+            },
+            {
+              "path": "/date-picker",
+              "title": "DatePicker ",
+              "chTitle": "日期选择器"
+            },
+            {
+              "path": "/upload",
+              "title": "Upload ",
+              "chTitle": "上传"
+            },
+            {
+              "path": "/transfer",
+              "title": "Transfer ",
+              "chTitle": "穿梭框"
+            },
+            {
+              "path": "/form",
+              "title": "Form ",
+              "chTitle": "表单"
+            },
+            {
+              "path": "/rate",
+              "title": "Rate ",
+              "chTitle": "评分"
+            }
+          ]
+        },
+        {
+          "groupName": "数据",
+          "list": [
+            {
+              "path": "/table",
+              "title": "Table ",
+              "chTitle": "表格"
+            },
+            {
+              "path": "/tag",
+              "title": "Tag ",
+              "chTitle": "标签"
+            },
+            {
+              "path": "/progress",
+              "title": "Progress ",
+              "chTitle": "进度条"
+            },
+            {
+              "path": "/badge",
+              "title": "Badge ",
+              "chTitle": "标记"
+            },
+            {
+              "path": "/tree",
+              "title": "Tree ",
+              "chTitle": "树形控件"
+            },
+            {
+              "path": "/pagination",
+              "title": "Pagination ",
+              "chTitle": "分页"
+            },
+            {
+              "path": "/skeleton",
+              "title": "Skeleton ",
+              "chTitle": "骨架屏"
+            }
+          ]
+        },
+        {
+          "groupName": "反馈",
+          "list": [
+            {
+              "path": "/alert",
+              "title": "Alert ",
+              "chTitle": "警告"
+            },
+            {
+              "path": "/loading",
+              "title": "Loading ",
+              "chTitle": "加载"
+            },
+            {
+              "path": "/message",
+              "title": "Message ",
+              "chTitle": "消息提示"
+            },
+            {
+              "path": "/message-box",
+              "title": "MessageBox ",
+              "chTitle": "弹框"
+            },
+            {
+              "path": "/notification",
+              "title": "Notification ",
+              "chTitle": "通知"
+            }
+          ]
+        },
+        {
+          "groupName": "导航",
+          "list": [
+            {
+              "path": "/tabs",
+              "title": "Tabs ",
+              "chTitle": "标签页"
+            },
+            {
+              "path": "/breadcrumb",
+              "title": "Breadcrumb ",
+              "chTitle": "面包屑"
+            },
+            {
+              "path": "/page-header",
+              "title": "PageHeader ",
+              "chTitle": "页头"
+            },
+            {
+              "path": "/steps",
+              "title": "Steps ",
+              "chTitle": "步骤条"
+            }
+          ]
+        },
+        {
+          "groupName": "其它",
+          "list": [
+            {
+              "path": "/dialog",
+              "title": "Dialog ",
+              "chTitle": "对话框"
+            },
+            {
+              "path": "/tooltip",
+              "title": "Tooltip ",
+              "chTitle": "文字提示"
+            },
+            {
+              "path": "/popover",
+              "title": "Popover ",
+              "chTitle": "弹出框"
+            },
+            {
+              "path": "/card",
+              "title": "Card ",
+              "chTitle": "卡片"
+            },
+            {
+              "path": "/carousel",
+              "title": "Carousel ",
+              "chTitle": "走马灯"
+            },
+            {
+              "path": "/collapse",
+              "title": "Collapse ",
+              "chTitle": "折叠面板"
+            },
+            {
+              "path": "/backtop",
+              "title": "Backtop ",
+              "chTitle": "回到顶部"
+            },
+            {
+              "path": "/infiniteScroll",
+              "title": "InfiniteScroll 无限滚动"
+            },
+            {
+              "path": "/drawer",
+              "title": "Drawer ",
+              "chTitle": "抽屉"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

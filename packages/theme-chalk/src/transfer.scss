@@ -1,0 +1,97 @@
+@charset "UTF-8";
+@import "common/var";
+@import "mixins/mixins";
+@import "button";
+@import "checkbox";
+
+@include b(transfer) {
+  font-size: 14px;
+  .wl-transfer__buttons {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 30px;
+  }
+}
+@include b(transfer-panel) {
+  border: $--select-dropdown-border;
+  border-radius: $--border-radius-base;
+  overflow: hidden;
+  background: $--button-disabled-background-color;
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  max-height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  @include e(header) {
+    height: 40px;
+    line-height: 40px;
+    background: #f5f7fa;
+    margin: 0;
+    padding-left: 15px;
+    border-bottom: $--select-dropdown-border;
+    box-sizing: border-box;
+    color: #000;
+    .wl-checkbox {
+      display: block;
+      line-height: 40px;
+      .wl-checkbox__label {
+        padding-left: 8px;
+        font-size: 16px;
+        color: #303133;
+        font-weight: 400;
+        span {
+          position: absolute;
+          right: 15px;
+          color: #909399;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  @include e(body) {
+    height: 246px;
+    .wl-scrollbar__wrap {
+      overflow-x: hidden;
+    }
+    .wl-checkbox-group {
+      margin: 0;
+      padding: 6px 0;
+      list-style: none;
+      // height: 246px;
+      overflow: hidden;
+      box-sizing: border-box;
+      .wl-checkbox {
+        color: #606266;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 15px;
+        display: block!important;
+        .wl-checkbox__input {
+          position: absolute;
+          top: 8px;
+        }
+        .wl-checkbox__label {
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: block;
+          box-sizing: border-box;
+          padding-left: 24px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+  .wl-transfer-panel__empty {
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    padding: 6px 15px 0;
+    color: #909399;
+    text-align: center;
+  }
+}

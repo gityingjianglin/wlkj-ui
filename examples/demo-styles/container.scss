@@ -1,0 +1,47 @@
+.wl-header,
+.wl-footer {
+  background: rgba(0, 146, 255, 1);
+  color: #fff;
+  line-height: 60px;
+}
+
+.wl-aside {
+  color: #fff;
+}
+
+#chang-jian-ye-mian-bu-ju + .demo-container {
+  .wl-header,
+  .wl-footer {
+    text-align: center;
+  }
+
+  .wl-aside {
+    background-color: rgba(0, 146, 255, 0.8);
+    text-align: center;
+    line-height: 200px;
+  }
+
+  .wl-main {
+    background-color: rgba(0, 146, 255, 0.6);
+    color: #fff;
+    text-align: center;
+    line-height: 160px;
+  }
+
+  & > .source > .wl-container {
+    margin-bottom: 40px;
+
+    &:nth-child(5) .wl-aside,
+    &:nth-child(6) .wl-aside {
+      line-height: 260px;
+    }
+
+    &:nth-child(7) .wl-aside {
+      line-height: 320px;
+    }
+  }
+
+  .source div > .wl-container {
+    margin-bottom: 30px;
+  }
+}

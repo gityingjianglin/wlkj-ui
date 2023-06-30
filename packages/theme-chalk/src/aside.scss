@@ -1,0 +1,7 @@
+@import "mixins/mixins";
+
+@include b(aside) {
+  box-sizing: border-box;
+  overflow: auto;
+  flex-shrink: 0;
+}
