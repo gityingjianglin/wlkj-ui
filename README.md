@@ -1,8 +1,5 @@
 > A Vue.js 2.0 UI Toolkit for Web.
 
-## Links
-- [主页和文档](http://www.baidu.com)
-
 ## Install
 ```shell
 npm install wlkj-ui -S
